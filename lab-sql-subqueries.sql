@@ -51,7 +51,7 @@ select actor_id from sakila.film_actor
 group by actor_id
 order by count(film_id) desc
 limit 1));
--- 6.Films rented by most profitable customer. You can use the customer table and payment table to find the most profitable customer 
+-- 7.Films rented by most profitable customer. You can use the customer table and payment table to find the most profitable customer 
 -- 		ie the customer that has made the largest sum of payments
 
 select title
@@ -65,7 +65,7 @@ group by customer_id
 order by sum(amount) desc
 limit 1)
 ;
--- 7.Customers who spent more than the average payments.
+-- 8.Customers who spent more than the average payments.
 
 select concat(first_name,' ',last_name) as customerName, sum(amount) as spend
 from sakila.payment
